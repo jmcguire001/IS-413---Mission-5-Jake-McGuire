@@ -1,0 +1,87 @@
+﻿<!--IS 413 - Mission 5
+    by Jacob McGuire
+    Section 2, Group 3
+    
+    This is a webpage that talks about typing
+    
+    SOME THINGS TO FIGURE OUT:
+    - How does the JavaScript that ensures proper input work?
+    - How to create colored tabs for the navigation bar?
+    - How to create a button above the footer that returns to the top of the page?
+    - How to create a button above the footer that sends user home?
+    - Comment out my code!
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - JM Typing</title>
+
+        <!-- Links to the CSS -->
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/IS_413___Mission_5.styles.css" asp-append-version="true" />
+    </head>
+
+    <body>
+        <header>
+            <!-- Create the navbar-->
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container-fluid">
+                    <!-- The main title on the navbar is also a link to homepage-->
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/logo.jpg" alt="Company Logo" style="max-height: 30px; margin-right: 10px;">Jake McGuire Teaches Typing</a>
+
+                    <!-- This is bootstrap for mobile devices; not really necessary, but I'll keep it anyway-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Create the links on the navbar -->
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <!-- Take me home, country roads -->
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- Get a quote -->
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Quote">Get a Quote</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- This is where individual views go -->
+        <div class="container-flex">
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+
+        <!-- Create the footer -->
+        <footer class="border-top footer text-muted" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="flex: 1;">
+                <!-- This is the copyright stuff, and it is also a link to the home page -->
+                <a style="color: inherit; cursor: pointer; text-decoration: none;" asp-area="" asp-controller="Home" asp-action="Index">&copy; 2024 | Jake McGuire Teaches Typing, by Jacob McGuire</a>
+            </div>
+
+            <!-- Attached my Instagram with a hyperlink -->
+            <a href="https://www.instagram.com/stumptown_funk/" title="Jake McGuire's Instagram link" target="_blank" rel="noopener noreferrer" style="margin-left: auto;"><img src="~/ig.png" alt="Instagram" style="width: 30px; height: 30px;" /></a>
+        </footer>
+
+        <!-- Link to the JavaScript -->
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        <!-- This is the to render the JavaScript -->
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
+</html>

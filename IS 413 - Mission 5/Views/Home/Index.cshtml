@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- This page is the index view, aka the home page -->
+<div class="text-center">
+    <!-- Get some intro stuff out of the way -->
+    <h1 class="display-4">Typing, Made Easy</h1>
+    <p style="font-style: italic;">My name is Jake McGuire, and I am the fastest one-handed typer I know.</p>
+</div>
+
+<!-- Attach a video! -->
+<div class="video-container">
+    <video height="320" width="180" controls autoplay muted>
+        <source src="~/typing.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Add some text to the right of the video -->
+    <div class="text-container">
+        <p align="justify">The Jake McGuire promise is that I can make you the second-fastest typer you'll know... behind me, of course. <a asp-area="" asp-controller="Home" asp-action="Quote">Meet with me</a> and find out for yourself.</p><br>
+        <p align="justify" style="font-weight: bold;">About Me</p>
+        <p align="justify">I began typing when I was 10, and 100 wpm later, I am still as passionate about it now as I was then. It must have been the click-clacking of the keys, or the words magically appearing on the screen, but it caught my interest and continues to do so.</p>
+        <p align="justify">I hope to inspire you to become a better typer, and I am eager to assist you in your journey. This a skill that can translate into any aspect of your life.</p>
+    </div>
+</div>
+
+<!-- My marketing slogan -->
+<div class="text-center">
+    <p style="font-style: italic;">If I can do it with one hand, you can do it two times faster.</p>
+</div>
+
+<!-- Evidence of my insane typing skills -->
+<div class="image-container">
+    <img src="~/easytest.png" />
+    <img src="~/mediumtest.png" />
+    <img src="~/hardtest.png" />
+</div>
+
+<!-- Totally authentic quote (not really) -->
+<div class="text-center">
+    <br><p style="font-style: italic; font-size: 18px;">"When I started learning from Jake, I became both a better typist and person."</p>
+    <p style="font-style: italic;">- Ryan Reynolds, probably</p>
+</div>
+
+<!-- Tell my origin story -->
+<div class="text-center">
+    <br><p style="font-weight: bold;" align="left">The Origins</p>
+    <p align="justify">I remember being a young boy waking up early just to get the first crack at Mavis Beacon Teaches Typing. I would fire up the ole' Windows XP, and I was soon racing video game cars, saving virtual penguins, 'online' shopping, and so much more. It was a fun way to practice, and I would always take my time leaving the computer when my 30 minutes ran out.</p>
+    <p align="justify">My passion for typing stems more from the memories it invokes as I recall the many hours I spent with Mavis Beacon. Long gone are the days of Windows XP, with its green taskbar and blue windows, and the clunky keyboard that I used to type on. But the memories remain, and as I work with you, I hope to instill my memories and experiences to ignite your own passion for typing proficiency.</p>
+</div>
+
+<!-- Ahhh the memories... -->
+<div class="img-container">
+    <img src="~/mavisbeacon.png" />
+</div>
+
+<!-- The call to action -->
+<div class="text-center">
+    <p style="font-style: italic; font-size: 12px;" align="left">One of the many games I played on Mavis Beacon Teaches Typing</p>
+    <br><p style="font-weight: bold;" align="left">Your Turn</p>
+    <!-- Link to get a quote -->
+    <p align="justify"><a asp-area="" asp-controller="Home" asp-action="Quote">Embark with me</a> on this typing journey, and your proficiency will improve (perhaps even to the speeds that I have reached!). You will not have the same memories that I have, but I guarantee that you will make your own memories.</p>
+    <p style="font-style: italic;">If I can do it with one hand, you can do it two times faster.</p>
+    <!-- Link to get a quote -->
+    <br><p style="font-size: 23.1px; font-weight: bold;">Interested in typing with me? <a href="@Url.Action("Quote", "Home")" title="Link to getting a quote">Click here</a> to get a quote!</p>
+</div>
