@@ -25,13 +25,5 @@ namespace IS_413___Mission_5.Controllers
         {
             return View();
         }
-
-        // Error method. The response cache is to prevent the page from being cached
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            // Keep track of the error and display it in the error message on the page
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }
